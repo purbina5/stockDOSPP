@@ -1,0 +1,61 @@
+﻿@model stockDosp.Models.login
+
+@{
+    ViewBag.Title = "Validar";
+    Layout = null;
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+            {
+<table>
+    <tr>
+        <td>
+            Ingresa tu RUT
+        </td>
+        <td>
+            @Html.TextBox("rut")
+        </td>
+    </tr>
+    <tr>
+       
+        <td>
+            Ingresa tu clave
+        </td>
+        <td>
+            @Html.Password("contraseña")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" values ="Ingresar" onclick="Validar()"/>
+        </td>
+    </tr>
+</table>
+}
+
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval") 
+}
+
+<script type="text/javascript">
+    function Validar()
+    {
+        var usuario = $("rut").val();
+        var contraseña = $("contraseña").val();
+
+        if (usuario == '')
+        {
+            alert('Ingresa tu RUT');
+            $("#rut").focus();
+        }
+        if (contraseña == '') {
+            alert('Ingresa tu contraseña');
+            $("#contraseña").focus();
+        }
+        return true;
+    }
+</script>

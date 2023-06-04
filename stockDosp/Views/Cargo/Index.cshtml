@@ -1,0 +1,35 @@
+﻿@model IEnumerable<stockDosp.Models.cargo>
+
+@{
+    ViewBag.Title = "Cargos";
+}
+
+<h2>Cargos</h2>
+<br />
+<p>
+    Listado de cargos de la empresa.
+</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Cargo
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_cargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_cargo)
+        </td>
+    </tr>
+}
+
+</table>

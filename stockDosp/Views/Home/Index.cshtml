@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventariado de la Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <br/>
+        <img src="https://i.imgur.com/kKCpNoH.png" />
+        <h1>Inventariado de la Empresa</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Listado Cargos", "ListadoCargo", "Cargo")</li>
+            <li>@Html.ActionLink("Personal", "ListadoPersonal", "Cargo")</li>
+            <li>@Html.ActionLink("Mantenimiento de Cargo", "Index", "MantenedorCargo")</li>
+            <li>@Html.ActionLink("Mantenimiento de Personal", "Index", "MantenedorUsuario")</li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            
+            <h2>Bienvenido al Sistema de Inventariado StockDosp</h2>
+            <p>Este sistema te permite gestionar el inventario de la empresa de manera eficiente y organizada.</p>
+        </section>
+    </main>
+
+
+</body>
+</html>

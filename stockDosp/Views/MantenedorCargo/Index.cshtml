@@ -1,0 +1,33 @@
+﻿@model IEnumerable<stockDosp.Models.cargo>
+
+@{
+    ViewBag.Title = "Mantenimiento de Cargos";
+}
+
+<h2>Mantenimiento de Cargos</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Cargos
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_cargo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_cargo }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_cargo }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id_cargo })
+        </td>
+    </tr>
+}
+
+</table>

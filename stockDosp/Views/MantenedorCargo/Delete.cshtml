@@ -1,0 +1,32 @@
+﻿@model stockDosp.Models.cargo
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Seguro que desea eliminar el cargo</h3>
+<div>
+    <h4>cargo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_cargo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

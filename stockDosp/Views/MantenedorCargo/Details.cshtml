@@ -1,0 +1,26 @@
+﻿@model stockDosp.Models.cargo
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>cargo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_cargo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_cargo }) |
+    @Html.ActionLink("Volver", "Index")
+</p>
